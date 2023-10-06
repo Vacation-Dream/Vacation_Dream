@@ -1,2 +1,4 @@
-public class SeoahInfo {
+public class
+
+SeoahInfo {
 }
