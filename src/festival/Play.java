@@ -26,9 +26,9 @@ public static String FMC = "\uD83D\uDC69";
         timeString(FMC + ": 예아 무슨일임?");
         grabHerHand();
 
-        if (Variables.love >= 0) {
-            HappyEnding.happyEnd();
-        }
+
+        HappyEnding.happyEnd();
+
 
 
     }

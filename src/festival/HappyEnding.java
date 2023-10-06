@@ -1,5 +1,7 @@
 package festival;
 
+import util.Variables;
+
 import static festival.Play.MC;
 import static festival.Play.FMC;
 import static util.Util.pressEnter;
@@ -21,13 +23,22 @@ public class HappyEnding {
         timeString(MC + ": 너와 함께 보낸 이번 여름처럼, 평생 함께하고 싶어.");
         pressEnter();
 
-        timeString(FMC + ": ㅇㅋ 콜");
-        System.out.println();
+        if (Variables.love >= 70) {
+            timeString(FMC + ": ㅇㅋ 콜");
+            System.out.println();
 
-        timeString("(나는 서아와 사귀게되었고, 곧 여름방학이 끝났다.)");
-        timeString("(나는 서아를 위해 도시로 돌아가지 않았고)");
-        timeString("(이곳 OO마을에서 자리를 잡기로 했다.)");
-        timeString("# HAPPY ENDING..");
-        System.exit(0);
+            timeString("(나는 서아와 사귀게되었고, 곧 여름방학이 끝났다.)");
+            timeString("(나는 서아를 위해 도시로 돌아가지 않았고)");
+            timeString("(이곳 OO마을에서 자리를 잡기로 했다.)");
+            timeString("# HAPPY ENDING..");
+            System.exit(0);
+        } else {
+            timeString(FMC + ": 아.. 우리 좋은 친구로 지내자.. ㅎㅎ;");
+            System.out.println();
+
+            timeString("(나는 서아와 이어지지 못했고, 곧 여름방학이 끝났다.)");
+            timeString("(그 후 도망치듯 도시로 올라왔고)");
+            timeString("(몇년뒤 서아가 누군가와 결혼한다는 소식이 들릴 뿐이였다.)");
+        }
     }
 }
