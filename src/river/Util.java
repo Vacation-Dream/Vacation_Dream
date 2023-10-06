@@ -19,21 +19,16 @@ public class Util {
 
 
 
-    public static void timeStringBehind(String text, long delay, long period) {
-        synchronized (lock) {
-            currentIndex =0;
-            Timer timer = new Timer();
-            timer.scheduleAtFixedRate(new TimerTask() {
-                @Override
-                public void run() {
-                    if (currentIndex < text.length()) {
-                        System.out.print(text.charAt(currentIndex));
-                        currentIndex++;
-                    } else {
-                        timer.cancel();
-                    }
-                }
-            }, delay, period);
+
+
+    public static void timeString(String text, int sleep){
+        for(char c : text.toCharArray()){
+            System.out.print(c);
+            try {
+                Thread.sleep(sleep);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
