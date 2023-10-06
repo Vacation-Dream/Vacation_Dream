@@ -1,6 +1,6 @@
 package walkEvent;
 
-import static walkEvent.Utils.*;
+import static util.Util.*;
 
 public class BalloonEvent {
     //산책을 나온 도중 꼬마아이의 풍선이 나뭇가지에 걸렸다!!

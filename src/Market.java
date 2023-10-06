@@ -1,6 +1,6 @@
 public class Market {
     // 상인들과 대화(채소가게 아저씨)
-    public void vegetable(){
+    public static void vegetable(){
         System.out.println("# 나는 기분 전환할 겸 시장으로 걸어갔다. ");
         System.out.println("# 시장을 걷던 중 채소가게 아저씨가 말을 걸어왔다.");
         System.out.println("# 채소가게 아저씨 : '학생 채소좀 보고가 사면 좋은걸 알려줄지도 흐흐' ");

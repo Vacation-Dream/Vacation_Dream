@@ -1,4 +1,8 @@
+import river.River;
+
 import java.util.Scanner;
+
+import static util.Util.*;
 
 public class Play {
     static Scanner sc = new Scanner(System.in);
@@ -28,6 +32,15 @@ public class Play {
         System.out.println("(1) 공터로 이동한다.");
         System.out.println("(2) 냇가로 이동한다.");
         System.out.println("(3) 시장으로 이동한다.");
+        String choice = sc.nextLine();
+        switch (choice){
+            case "1":
+                walkEvent.Main.select();
+            case "2":
+                new River().event();
+            case "3":
+                Market.vegetable();
+        }
 
         Variables.today += 1;
     }
@@ -45,14 +58,6 @@ public class Play {
 
 
 
-    private static void pressEnter() {
-        System.out.print("# 엔터를 눌러 계속.....");
-        while (true) {
-            String a = sc.nextLine();
-            if(a.isEmpty()) {
-                break;
-            }
-        }
-    }
+
 
 }
