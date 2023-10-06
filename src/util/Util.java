@@ -49,7 +49,7 @@ public class Util {
     }
 
     public static void loveCheck() {
-        if(Variables.love == 0) {
+        if(Variables.love <= 0) {
             System.out.println("서아의 호감도: \uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
         }
         else if(Variables.love >= 100) {

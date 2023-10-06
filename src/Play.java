@@ -1,8 +1,9 @@
-import Market.Market;
+import Market.*;
 import river.River;
 import util.Util;
 import util.Variables;
 import util.Util.*;
+
 
 import java.util.Scanner;
 
@@ -56,7 +57,7 @@ public class Play {
                     new River().event();
                     break;
                 case "3":
-                    Market.vegetable();
+                    Special.SpecialScene();
                     break;
             }
         } else {
