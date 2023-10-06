@@ -1,5 +1,6 @@
 package walkEvent;
 
+import static util.Util.*;
 public class WalkWithSeoah {
     public static void start(){
         System.out.println("# 서아와의 산책 이벤트 시작");
