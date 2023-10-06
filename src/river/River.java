@@ -50,40 +50,34 @@ public class River {
     }
     public void meetSeoah(){
         timeString("냇가를 산책하던 도중에 서아를 만났다");
-        System.out.print(Variables.name+": ");
-        timeString("아.. 안녕 .. 서아야..");
-        System.out.print("서아: ");
-        timeString(": 안녕 "+Variables.name);
+        test.talkMe("아.. 안녕 .. 서아야..");
+        test.talkGirl("안녕 "+Variables.name);
         System.out.println("# 1. 같이 낚시하자고 물어본다");
         System.out.println("# 2. 같이 물수제비 하자고 물어본다");
         String s =input(">> ");
-        talkSeoah(Integer.parseInt(s));
+        try{talkSeoah(Integer.parseInt(s));}catch (NumberFormatException e){
+            System.out.println("숫자로 입력해주세요");
+        }
     }
     public void talkSeoah(int choiceNumber){
         switch (choiceNumber){
             case 1:
-                System.out.print(Variables.name+": ");
-                timeString("서아야.. 나랑 낚시 하지 않을래??");
+                test.talkMe("서아야.. 나랑 낚시 하지 않을래??");
                 if(Variables.love >=30){
-                    System.out.print("서아: ");
-                    timeString("그래 좋아 같이 낚시하자!!");
+                    test.talkGirl("그래 좋아 같이 낚시하자!!");
                     Variables.love +=5;
                 }else{
-                    System.out.print("서아: ");
-                    timeString("싫어 낚시 안할꺼야!!");
+                    test.talkGirl("싫어 낚시 안할꺼야!!");
                     Variables.love -=5;
                 }
                 break;
             case 2:
-                System.out.print(Variables.name+": ");
-                timeString("서아야.. 나랑 물수제비 하지 않을래??");
+                test.talkMe("서아야.. 나랑 물수제비 하지 않을래??");
                 if(Variables.love <=60){
-                    System.out.print("서아: ");
-                    timeString("그래 좋아 같이 물수제비 하자!!");
+                    test.talkGirl("그래 좋아 같이 물수제비 하자!!");
                     Variables.love +=5;
                 }else{
-                    System.out.print("서아: ");
-                    timeString("싫어 나 물수제비 안할꺼야");
+                    test.talkGirl("싫어 나 물수제비 안할꺼야");
                     Variables.love -=5;
                 }
                 break;
@@ -120,6 +114,7 @@ public class River {
             System.out.println("# 1. 고양이에게 물고기를 준다");
             System.out.println("# 2. 고양이를 무시하고 낚시를 한다");
             String s =input(">> ");
+            try{
             switch (Integer.parseInt(s)){
                 case 1:
                     System.out.println("고양이가 맛있게 먹고 돌아간다");
@@ -128,7 +123,10 @@ public class River {
                 case 2:
                     System.out.println("고양이가 매섭게 쳐다본다!");
                     break;
+            }}catch (NumberFormatException e){
+                System.out.println("숫자를 입력해주세요");
             }
+
         }
 
 
