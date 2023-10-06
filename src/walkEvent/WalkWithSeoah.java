@@ -1,8 +1,10 @@
 package walkEvent;
 
+
 import util.Variables;
 
 import static util.Util.*;
+
 
 public class WalkWithSeoah {
     public static void start(){
