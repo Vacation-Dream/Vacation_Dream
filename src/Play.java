@@ -1,4 +1,6 @@
 import river.River;
+import util.Variables;
+
 
 import java.util.Scanner;
 
