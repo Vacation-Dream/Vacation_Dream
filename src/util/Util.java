@@ -36,7 +36,7 @@ public class Util {
         }
     }
 
-    static Scanner sc = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
     public static void makeLine(){
         System.out.println("=========================================");
     }
@@ -47,5 +47,42 @@ public class Util {
     public static void br(){
         System.out.println("");
     }
+
+    public static void loveCheck() {
+        if(Variables.love == 0) {
+            System.out.println("서아의 호감도: \uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 100) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96");
+        }
+        else if(Variables.love >= 90) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 80) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 70) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 60) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 50) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 40) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 30) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 20) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+        else if(Variables.love >= 10) {
+            System.out.println("서아의 호감도: \uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
+        }
+    };
+
 
     }
