@@ -2,6 +2,8 @@ package river;
 import util.Util.*;
 import util.Variables;
 
+import java.time.temporal.ValueRange;
+
 import static util.Util.*;
 
 public class River {
@@ -23,6 +25,7 @@ public class River {
                 break;
             case 2:
                 timeString("주인공이 수영을 합니다");
+
                 break;
             case 3:
                 timeString("아무일도 없었다 그만 돌아가자");
