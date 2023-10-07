@@ -5,9 +5,10 @@ import util.Variables;
 import static util.Util.*;
 
 public class BalloonEvent {
+    static String me = Variables.name;
     //산책을 나온 도중 꼬마아이의 풍선이 나뭇가지에 걸렸다!!
     public static void start(){
-        System.out.println("# 풍선 이벤트 시작");
+        System.out.println("# 풍선 이벤트");
         makeLine();
         since1();
     }
@@ -55,7 +56,7 @@ public class BalloonEvent {
         timeString("# 꼬마아이는 고맙다고 인사를 하며 풍선을 들고 돌아갔다.");
         timeString("# 덕분에 풍선을 계기로 나와 서아는 더 가까워졌다");
         timeString("서아: 어릴때부터 나무에 잘 올라가더니 여전하구나 ");
-        timeString("쥔공: 맞아 그랬었지.. 서아 너는 ... ");
+        timeString(me+" : 맞아 그랬었지.. 서아 너는 ... ");
         br();
         pressEnter();
         timeString(" 서아는 뭐를 좋아했더라? ");
@@ -82,23 +83,23 @@ public class BalloonEvent {
 
     }
     private static void since2_1() {
-        timeString("쥔공: 모래성 만드는 거 좋아했잖아");
-        timeString("쥔공: 모래성 자꾸 쓰러져서 너 울고 그랬던거 기억나네~");
-        timeString("서아: ㅇ..안 울었거든! (호감도+0)");
+        timeString(me+" : 모래성 만드는 거 좋아했잖아");
+        timeString(me+" : 모래성 자꾸 쓰러져서 너 울고 그랬던거 기억나네~");
+        timeString("서아 : ㅇ..안 울었거든! (호감도+0)");
         pressEnter();
     }
 
     private static void since2_2() {
-        timeString("쥔공: 잠자리 채집 하는거 좋아했잖아~");
-        timeString("서아: 무슨 소리야 나 잠자리 무서워하는데 (호감도-5)");
+        timeString(me+" : 잠자리 채집 하는거 좋아했잖아~");
+        timeString("서아 : 무슨 소리야 나 잠자리 무서워하는데 (호감도-5)");
         Variables.love -= 5;
         pressEnter();
     }
 
     private static void since2_3() {
-        timeString("쥔공: 공주와 기사놀이 하는거 좋아했잖아~");
-        timeString("쥔공: 서아공주..! 구하러 왔소");
-        timeString("서아: 아하하 뭐하는거야~(호감도+5)");
+        timeString(me+" : 공주와 기사놀이 하는거 좋아했잖아~");
+        timeString(me+" : 서아 공주..! 구하러 왔소");
+        timeString("서아 : 낯간지럽게.. 그만해// (호감도+5)");
         Variables.love += 5;
         pressEnter();
     }
