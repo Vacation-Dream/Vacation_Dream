@@ -14,10 +14,11 @@ public class BalloonEvent {
     }
 
     public static void since1() {
-        timeString("# 터벅터벅");
-        timeString("# 꼬마아이와 서아가 나무 옆에 서있다. ");
-        timeString("# 앗! 자세히보니 풍선이 나뭇가지에 껴있는 것 같다. 어떡하지?");
-        br();
+        timeString("# 집을 나서 걷기 시작했다.");
+        timeString("# 저 멀리 꼬마아이와 서아가 보인다.");
+        timeString("# 앗! 자세히보니 풍선이 나뭇가지에 껴있는 것 같다.");
+        pressEnter();
+        talkMe("어떡할까?");
         System.out.println("1. 나무에 올라가 풍선을 꺼내준다");
         System.out.println("2. 모른척 한다");
 
@@ -26,9 +27,11 @@ public class BalloonEvent {
             switch (select){
                 case "1":
                     since1_1();
+                    loveGage(20);
                     break w;
                 case "2":
                     since1_2();
+                    loveGage(-10);
                     break w;
                 default:
                     System.out.println("# 선택지에 있는 숫자를 입력해주세요");
@@ -38,28 +41,25 @@ public class BalloonEvent {
 
     }
     public static void since1_1(){
-        timeString("# 무서웠지만 무사히 나무에 올라가 풍선을 꺼내왔다");
-        timeString("\uD83D\uDC69:너 꽤 담력있네? (호감+10)");
-        Variables.love += 20;
+        talkMe("# 무서웠지만 무사히 나무에 올라가 풍선을 꺼내왔다");
+        talkSeo("'너 꽤 담력있네?'");
         pressEnter();
         since2();
     }
     public static void since1_2(){
-        timeString("# 지나가다 서아와 눈이 마주쳤지만 집으로 돌아갔다");
-        timeString("\uD83D\uDC69:(좀 도와주지. .. . ) (호감도-10)");
-        Variables.love -= 10;
+        talkMe("지나가다 서아와 눈이 마주쳤지만 집으로 돌아갔다");
+        talkSeo("좀 도와주지...");
         pressEnter();
-        br();
     }
 
     public static void since2(){
-        timeString("# 꼬마아이는 고맙다고 인사를 하며 풍선을 들고 돌아갔다.");
-        timeString("# 덕분에 풍선을 계기로 나와 서아는 더 가까워졌다");
-        timeString("서아: 어릴때부터 나무에 잘 올라가더니 여전하구나 ");
-        timeString(me+" : 맞아 그랬었지.. 서아 너는 ... ");
-        br();
+        talkMe("꼬마아이는 고맙다고 인사를 하며 풍선을 들고 돌아갔다.");
+        talkMe("덕분에 풍선을 계기로 나와 서아는 더 가까워졌다");
+        talkSeo("'어릴때부터 나무에 잘 올라가더니 여전하구나'");
+        talkMe("' : 맞아 그랬었지.. 서아 너는 ...'");
+
         pressEnter();
-        timeString(" 서아는 뭐를 좋아했더라? ");
+        talkMe("서아는 뭐를 좋아했더라? ");
         System.out.println("1. 모래성 놀이 ");
         System.out.println("2. 잠자리채집 ");
         System.out.println("3. 공주와 기사놀이 ");
@@ -69,12 +69,20 @@ public class BalloonEvent {
             switch (select){
                 case "1":
                     since2_1();
+                    System.out.println("# 그 후에 집으로 돌아갔다");
+                    pressEnter();
                     break w;
                 case "2":
                     since2_2();
+                    loveGage(-5);
+                    System.out.println("# 그 후에 집으로 돌아갔다");
+                    pressEnter();
                     break w;
                 case "3":
                     since2_3();
+                    loveGage(5);
+                    System.out.println("# 그 후에 집으로 돌아갔다");
+                    pressEnter();
                     break w;
                 default:
                     System.out.println("# 선택지에 있는 숫자를 입력해주세요");
@@ -83,25 +91,20 @@ public class BalloonEvent {
 
     }
     private static void since2_1() {
-        timeString(me+" : 모래성 만드는 거 좋아했잖아");
-        timeString(me+" : 모래성 자꾸 쓰러져서 너 울고 그랬던거 기억나네~");
-        timeString("서아 : ㅇ..안 울었거든! (호감도+0)");
-        pressEnter();
+        talkMe("'모래성 만드는 거 좋아했잖아'");
+        talkMe("'모래성 자꾸 쓰러져서 너 울고 그랬던거 기억나네~'");
+        talkSeo("'서아 : ㅇ..안 울었거든!'");
     }
 
     private static void since2_2() {
-        timeString(me+" : 잠자리 채집 하는거 좋아했잖아~");
-        timeString("서아 : 무슨 소리야 나 잠자리 무서워하는데 (호감도-5)");
-        Variables.love -= 5;
-        pressEnter();
+        talkMe("'잠자리 채집 하는거 좋아했잖아~'");
+        talkSeo("'무슨 소리야 나 잠자리 무서워하는데'");
     }
 
     private static void since2_3() {
-        timeString(me+" : 공주와 기사놀이 하는거 좋아했잖아~");
-        timeString(me+" : 서아 공주..! 구하러 왔소");
-        timeString("서아 : 낯간지럽게.. 그만해// (호감도+5)");
-        Variables.love += 5;
-        pressEnter();
+        talkMe("'공주와 기사놀이 하는거 좋아했잖아~'");
+        talkMe("'서아 공주..! 구하러 왔소'");
+        talkSeo("'낯간지럽게.. 그만해//'");
     }
 
     public static void since3() {

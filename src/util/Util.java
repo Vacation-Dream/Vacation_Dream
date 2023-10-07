@@ -97,5 +97,16 @@ public class Util {
         System.out.print("\uD83D\uDC66\uD83C\uDFFB(준석): ");
         Util.timeString(s);
     }
-
+    public static void loveGage(int num){
+        Variables.love += num;
+        if (num >= 10){
+            System.out.println("# 호감도가 상승했습니다.");
+        } else if (num >=5) {
+            System.out.println("# 호감도가 조금 상승했습니다.");
+        } else if (num >= -5) {
+            System.out.println("# 호감도가 조금 하락했습니다.");
+        } else {
+            System.out.println("# 호감도가 하락했습니다");
+        }
+    }
     }
