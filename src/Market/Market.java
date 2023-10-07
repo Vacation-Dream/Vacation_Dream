@@ -48,6 +48,16 @@ public class Market {
         System.out.println("# 1. 돕는다");
         System.out.println("# 2. 돕지않는다");
         System.out.print("# >>");
+        String choice = sc.nextLine();
+        switch (choice){
+            case "1":
+                flower1();
+                break;
+            case "2":
+                flower2();
+                break;
+        }
+        pressEnter();
     }
     public void flower1(){
         System.out.println("# 나 : '안에 들여놓으면 되는거죠?'");
