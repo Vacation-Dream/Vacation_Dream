@@ -19,7 +19,7 @@ public static String FMC = "\uD83D\uDC69";
         timeString("이렇게 저렇게 신나게 놀았다.");
 
         System.out.println();
-        System.out.println("잠시후 축제의 하이라이트인 불꽃놀이가 시작된다.");
+        System.out.println("# 잠시후 축제의 하이라이트인 불꽃놀이가 시작된다.");
         pressEnter();
 
         timeString(MC + ": 서아야 할 말이 있어.");
@@ -53,5 +53,8 @@ public static String FMC = "\uD83D\uDC69";
                 break;
         }
     }
+
+
+
 
 }

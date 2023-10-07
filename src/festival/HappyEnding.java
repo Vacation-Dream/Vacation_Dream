@@ -39,6 +39,7 @@ public class HappyEnding {
             timeString("(나는 서아와 이어지지 못했고, 곧 여름방학이 끝났다.)");
             timeString("(그 후 도망치듯 도시로 올라왔고)");
             timeString("(몇년뒤 서아가 누군가와 결혼한다는 소식이 들릴 뿐이였다.)");
+            System.exit(0);
         }
     }
 }

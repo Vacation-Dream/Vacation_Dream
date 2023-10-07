@@ -39,8 +39,8 @@ public class Play {
         System.out.printf("%d일차 %s입니다. \n", Variables.today, Variables.dayplus);
         Util.loveCheck();
         System.out.println("========== 오늘의 선택지 ==========");
-        if (Variables.today != 7) {
-            System.out.println("(1) 공터로 이동한다.");
+        if (Variables.today != 7 || Variables.dayplus.equals("아침") || Variables.dayplus.equals("오후")) {
+            System.out.println("(1) 근처에서 산책한다.");
             System.out.println("(2) 냇가로 이동한다.");
             System.out.println("(3) 시장으로 이동한다.");
         } else if (Variables.today == 7 && Variables.dayplus.equals("저녁")){
@@ -63,9 +63,9 @@ public class Play {
         } else {
             switch (choice) {
                 case "1":
-                festival.Play.storyPlay();
+                    festival.Play.storyPlay();
                 case "2":
-//                    집에있는다.
+                    festival.CowardEnding.cowardEnd();
             }
         }
 
