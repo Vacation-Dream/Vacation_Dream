@@ -37,6 +37,11 @@ public class Play {
         else if (Variables.dayplus.equals("오후")) System.out.print("⛅ ");
         else System.out.print("\uD83C\uDF19 ");
         System.out.printf("%d일차 %s입니다. \n", Variables.today, Variables.dayplus);
+
+        if (Variables.today == 5){
+            // 준석이 이벤트 발동(행동 X , 그냥 이벤트)
+        }
+
         Util.loveCheck();
         System.out.println("========== 오늘의 선택지 ==========");
         if (Variables.today != 7 || Variables.dayplus.equals("아침") || Variables.dayplus.equals("오후")) {
