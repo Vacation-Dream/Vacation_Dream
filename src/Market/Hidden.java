@@ -6,8 +6,7 @@ import static util.Variables.*;
 
 public class Hidden {
     public static void HiddenScene(){
-        System.out.println("# 나는 기분 전환할 겸 시장으로 걸어갔다. ");
-        System.out.println("# 길을 걷던중 서아와 같이놀때 같이 놀던 준석이를 만났다 ");
+        System.out.println("# 집을 나서던중 서아와 같이놀때 같이 놀던 준석이를 만났다 ");
         System.out.println("# 준석이는 소심한 성격에 작고 외소한 친구였다. ");
         System.out.println("# 그런 준석이를 서아는 곧잘 챙겨주었다. ");
         System.out.println("# 하지만 오랜만에 만난 준석이는 달라졌다.  ");
