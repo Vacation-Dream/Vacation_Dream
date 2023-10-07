@@ -15,7 +15,7 @@ public class Special {
         System.out.println("# 할머니 : '그래 우리 손주 잠깐 이리로 와보렴' ");
         System.out.println("# 그렇게 나는 할머니의 부름에 마을회관에 들어갔다. ");
         System.out.println("# 들어가려는 순간 나는 내 두 눈을 의심했다. ");
-        System.out.println("# 우리 할머니 옆에 소아서아 할머니와 소아가서아가 있었다. ");
+        System.out.println("# 우리 할머니 옆에 서아 할머니와 서아가 있었다. ");
         System.out.println("# 나는 서둘러 서아 할머니와 서아에게 인사 후 할머니 옆으로 앉았다. ");
         System.out.println("# 할머니 : '##아 옆집 서아 기억나~? 어릴때 둘이 그렇게 붙어다니잖아~' ");
         System.out.println("# 1. 기억난다");

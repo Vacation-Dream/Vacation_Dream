@@ -7,4 +7,6 @@ public class Variables
     public static int love = 0;
 
     public static String dayplus = "아침";
+
+
 }
