@@ -85,4 +85,17 @@ public class Util {
     };
 
 
+    public static void talkSeo(String s){
+        System.out.print("\uD83D\uDC69\uD83C\uDFFB(서아): ");
+        Util.timeString(s);
+    }
+    public static void talkMe(String s){
+        System.out.print("\uD83E\uDDD1\uD83C\uDFFB"+ "(" + Variables.name+"): ");
+        Util.timeString(s);
+    }
+    public static void talkJun(String s){
+        System.out.print("\uD83D\uDC66\uD83C\uDFFB(준석): ");
+        Util.timeString(s);
+    }
+
     }
