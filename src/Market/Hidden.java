@@ -17,30 +17,36 @@ public class Hidden {
         System.out.println("# 준석 : '이야 오랜만이다! 나 기억나? 준석이야' ");
         System.out.println("# 나 : '준석이 맞지? 기억나' ");
         System.out.println("# 준석 : 이렇게 보니까 좋다야  ");
-        System.out.println("# 1. ");
-        System.out.println("# 2. ");
+        System.out.println("# 준석 : 너도 이번에 축제 구경오지? 사실... 이번축제때 나 서아한테 고백할 생각이야 ");
+        System.out.println("# 준석 : 너는 어떻게 생각해? ");
+        System.out.println("# 준석이도 서아를 좋아하는것 같은데 어쩌지... ");
+        System.out.println("# 1. 찬성한다");
+        System.out.println("# 2. 반대한다");
         System.out.print("# >>");
         String choice = sc.nextLine();
         switch (choice){
             case "1":
                 HiddenScene1();
-                love += 10;
                 break;
             case "2":
                 HiddenScene2();
-                love -= 5;
                 break;
         }
         pressEnter();
     }
 
     private static void HiddenScene1() {
-        System.out.println("# 나 : '기억나죠 '");
-
+        System.out.println("# 나 : '고백하는게 좋지 않을까?'");
+        System.out.println("# 준석 : '정말 그렇게 생각해? 고마워 덕분에 용기가 난다!'");
+        System.out.println("# ");
     }
 
     private static void HiddenScene2() {
-        System.out.println("# 나 : '기억나죠 '");
+        System.out.println("# 나 : '아..안돼..!'");
+        System.out.println("# 이런 나도 모르게 반대해버렸다...");
+        System.out.println("# 준석 : '왜?'");
+        System.out.println("# 준석이는 놀라며 나에게 물었다.");
+        System.out.println("# 나 : '사실 나도 서아를 좋아해 나도 이번 축제때 서아게 고백할 생각이였어...'");
 
     }
 }
