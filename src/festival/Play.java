@@ -45,7 +45,7 @@ public static String FMC = "\uD83D\uDC69";
                 timeString("(서아의 두손을 덥썩 잡았다.)");
                 timeString("서아는 갑작스러운 나의 행동에 놀란듯 보였다.");
                 timeString("# 호감도가 조금 증가했습니다.");
-                Variables.love += 5;
+                loveGage(5);
                 pressEnter();
                 break;
             case "2":
