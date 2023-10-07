@@ -3,6 +3,8 @@ import river.River;
 import util.Util;
 import util.Variables;
 import util.Util.*;
+import java.util.ArrayList;
+
 
 
 import java.util.Scanner;
@@ -43,6 +45,7 @@ public class Play {
             System.out.println("(1) 근처에서 산책한다.");
             System.out.println("(2) 냇가로 이동한다.");
             System.out.println("(3) 시장으로 이동한다.");
+            System.out.println("(4) 메모장을 편다.");
         } else if (Variables.today == 7 && Variables.dayplus.equals("저녁")){
             System.out.println("(1) 축제장소로 이동한다.");
             System.out.println("(2) 실패가 두려워서 가지않는다.");
@@ -57,7 +60,10 @@ public class Play {
                     new River().event();
                     break;
                 case "3":
-                    Special.SpecialScene();
+                    Market.vegetable();
+                    break;
+                case "4":
+                    hint();
                     break;
             }
         } else {
@@ -83,7 +89,39 @@ public class Play {
         dayStart();
     }
 
+    public static void hint() {
+        System.out.println("====================");
+        System.out.println("메모장을 폈다 뭐부터 볼까?");
+        System.out.println("(1) 서아가 좋아하는것");
+        System.out.println("(2) 서아가 싫어하는것");
+        String choice = sc.nextLine();
+        switch (choice){
+            case "1":
+                like();
+                break;
+            case "2":
+                hate();
+                break;
+        }
+    }
 
+    public static void like(){
+        System.out.println("서아가 좋아하는것 리스트");
+        System.out.println("====================");
+        for (String element : Variables.likeList) {
+            System.out.println(element);
+        }
+        pressEnter();
+    }
+
+    public static void hate(){
+        System.out.println("서아가 좋아하는것 리스트");
+        System.out.println("====================");
+        for (String element : Variables.hateList) {
+            System.out.println(element);
+        }
+        pressEnter();
+    }
 
 
 

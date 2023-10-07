@@ -50,8 +50,8 @@ public class River {
     }
     public void meetSeoah(){
         timeString("냇가를 산책하던 도중에 서아를 만났다");
-        test.talkMe("아.. 안녕 .. 서아야..");
-        test.talkGirl("안녕 "+Variables.name);
+        talkMe("아.. 안녕 .. 서아야..");
+        talkSeo("안녕 "+Variables.name);
         System.out.println("# 1. 같이 낚시하자고 물어본다");
         System.out.println("# 2. 같이 물수제비 하자고 물어본다");
         String s =input(">> ");
@@ -62,22 +62,22 @@ public class River {
     public void talkSeoah(int choiceNumber){
         switch (choiceNumber){
             case 1:
-                test.talkMe("서아야.. 나랑 낚시 하지 않을래??");
+                talkMe("서아야.. 나랑 낚시 하지 않을래??");
                 if(Variables.love >=30){
-                    test.talkGirl("그래 좋아 같이 낚시하자!!");
+                    talkSeo("그래 좋아 같이 낚시하자!!");
                     Variables.love +=5;
                 }else{
-                    test.talkGirl("싫어 낚시 안할꺼야!!");
+                    talkSeo("싫어 낚시 안할꺼야!!");
                     Variables.love -=5;
                 }
                 break;
             case 2:
-                test.talkMe("서아야.. 나랑 물수제비 하지 않을래??");
+                talkMe("서아야.. 나랑 물수제비 하지 않을래??");
                 if(Variables.love <=60){
-                    test.talkGirl("그래 좋아 같이 물수제비 하자!!");
+                    talkSeo("그래 좋아 같이 물수제비 하자!!");
                     Variables.love +=5;
                 }else{
-                    test.talkGirl("싫어 나 물수제비 안할꺼야");
+                    talkSeo("싫어 나 물수제비 안할꺼야");
                     Variables.love -=5;
                 }
                 break;
