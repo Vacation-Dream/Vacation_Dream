@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
+import static Market.Hidden.HiddenScene;
+import static Market.Special.SpecialScene;
 import static util.Util.*;
 
 public class Play {
@@ -30,19 +32,28 @@ public class Play {
         timeString("# 목표: 7일차 저녁, 축제에서 서아에게 고백하기");
         System.out.print("# 당신의 이름을 정해주세요: ");
         Variables.name = sc.nextLine();
+
+
+        SpecialScene();
+
     }
 
 
     private static void dayStart() {
+
+
         System.out.println();
         if (Variables.dayplus.equals("아침")) System.out.print("☀\uFE0F ");
         else if (Variables.dayplus.equals("오후")) System.out.print("⛅ ");
         else System.out.print("\uD83C\uDF19 ");
         System.out.printf("%d일차 %s입니다. \n", Variables.today, Variables.dayplus);
 
-        if (Variables.today == 5){
-            // 준석이 이벤트 발동(행동 X , 그냥 이벤트)
+        if (Variables.today == 5 || Variables.dayplus.equals("아침")){
+            HiddenScene();
+            System.out.printf("%d일차 %s입니다. \n", Variables.today, Variables.dayplus);
         }
+
+
 
         Util.loveCheck();
         System.out.println("========== 오늘의 선택지 ==========");
@@ -51,23 +62,26 @@ public class Play {
             System.out.println("(2) 냇가로 이동한다.");
             System.out.println("(3) 시장으로 이동한다.");
             System.out.println("(4) 메모장을 편다.");
-            System.out.println(">> ");
+            System.out.print(">> ");
         } else if (Variables.today == 7){
             System.out.println("(1) 축제장소로 이동한다.");
             System.out.println("(2) 집에 있는다.");
-            System.out.println(">> ");
+            System.out.print(">> ");
         }
         String choice = sc.nextLine();
         if (Variables.today != 7) {
             switch (choice) {
                 case "1":
                     walkEvent.Main.select();
+                    roof();
                     break;
                 case "2":
                     new River().event();
+                    roof();
                     break;
                 case "3":
                     Market.vegetable();
+                    roof();
                     break;
                 case "4":
                     hint();
@@ -83,6 +97,10 @@ public class Play {
         }
 
 
+        dayStart();
+    }
+
+    public static void roof() {
         if (Variables.dayplus.equals("아침")) {
             Variables.dayplus = "오후";
         }
@@ -122,7 +140,7 @@ public class Play {
     }
 
     public static void hate(){
-        System.out.println("서아가 좋아하는것 리스트");
+        System.out.println("서아가 싫어하는것 리스트");
         System.out.println("====================");
         for (String element : Variables.hateList) {
             System.out.println(element);
