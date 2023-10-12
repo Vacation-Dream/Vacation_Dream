@@ -36,7 +36,7 @@ public class Special {
     }
 
     private static void SpecialScene1() {
-        System.out.println("# 나 : '기억나죠 '");
+        System.out.println("# 나 : '기억나죠'");
         System.out.println("# 나 : '8살 때 아무것도 없는 시골에서 심심해하던 저와 놀아준 아주 고마운 친구요ㅎㅎ'");
         System.out.println("# 말이 끝나자 소아와 눈이 마주쳤다");
         System.out.println("# 서아는 눈을 피했지만, 입가에 살짝 미소가 띄어져 있었다. ");
@@ -48,7 +48,7 @@ public class Special {
 
     private static void SpecialScene2() {
         System.out.println("# 나 : '아뇨 기억이 잘...'");
-        System.out.println("# 나도 모르게 거짓말을 해버렸어");
+        System.out.println("# 나도 모르게 거짓말을 해버렸다");
         System.out.println("# 서아 : '에이 할머니 그때면 엄청 오래죠 ㅎㅎ...' ");
         System.out.println("# 서아 : '저 카페에서 친구 만나기로 해서 먼저 일어나 볼게요' ");
         System.out.println("# 그렇게 서아는 자리를 떴고 나는 마을회관에서 잡일을 돕고 집으로 돌아갔다.");

@@ -2,6 +2,8 @@ package river;
 import util.Util.*;
 import util.Variables;
 
+import java.time.temporal.ValueRange;
+
 import static util.Util.*;
 
 public class River {
@@ -24,6 +26,7 @@ public class River {
                 break;
             case 2:
                 timeString("주인공이 수영을 합니다");
+
                 timeString("서아가 그 모습을 보고 멋있다고 생각합니다");
                 loveGage(5);
                 break;
@@ -90,6 +93,7 @@ public class River {
                 }else{
                     talkSeo("\'싫어 나 물수제비 안할꺼야\'");
                     loveGage(-5);
+
                 }
                 break;
         }
