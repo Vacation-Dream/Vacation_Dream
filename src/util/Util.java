@@ -48,8 +48,12 @@ public class Util {
         System.out.println("");
     }
 
+
+
     public static void loveCheck() {
-        if(Variables.love <= 0) {
+        if(Variables.love < 0) Variables.love = 0;
+
+        if(Variables.love == 0) {
             System.out.println("서아의 호감도: \uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
         }
         else if(Variables.love >= 100) {
@@ -79,9 +83,11 @@ public class Util {
         else if(Variables.love >= 20) {
             System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
         }
-        else if(Variables.love >= 10) {
+        else if(Variables.love >= 1) {
             System.out.println("서아의 호감도: \uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
         }
+
+
     };
 
 
