@@ -48,8 +48,24 @@ public class Util {
         System.out.println("");
     }
 
+    public static void loveGage(int num){
+        Variables.love += num;
+        if (num >= 10){
+            System.out.println("# 호감도가 상승했습니다.");
+        } else if (num >=5) {
+            System.out.println("# 호감도가 조금 상승했습니다.");
+        } else if (num >= -5) {
+            System.out.println("# 호감도가 조금 하락했습니다.");
+        } else {
+            System.out.println("# 호감도가 하락했습니다");
+        }
+    }
+
+
     public static void loveCheck() {
-        if(Variables.love <= 0) {
+        if(Variables.love < 0) Variables.love = 0;
+
+        if(Variables.love == 0) {
             System.out.println("서아의 호감도: \uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
         }
         else if(Variables.love >= 100) {
@@ -79,9 +95,11 @@ public class Util {
         else if(Variables.love >= 20) {
             System.out.println("서아의 호감도: \uD83D\uDC96\uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
         }
-        else if(Variables.love >= 10) {
+        else if(Variables.love >= 1) {
             System.out.println("서아의 호감도: \uD83D\uDC96\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D\uD83E\uDD0D");
         }
+
+
     };
 
 
