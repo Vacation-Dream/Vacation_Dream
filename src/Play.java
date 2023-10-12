@@ -55,6 +55,7 @@ public class Play {
 
 
 
+
         Util.loveCheck();
         System.out.println("========== 오늘의 선택지 ==========");
         if (Variables.today != 7) {
