@@ -8,6 +8,7 @@ public class BalloonEvent {
     static String me = Variables.name;
     //산책을 나온 도중 꼬마아이의 풍선이 나뭇가지에 걸렸다!!
     public static void start(){
+        makeLine();
         System.out.println("# 풍선 이벤트");
         makeLine();
         since1();
