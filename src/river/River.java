@@ -56,6 +56,7 @@ public class River {
     }
     public void meetSeoah(){
         timeString("냇가를 산책하던 도중에 서아를 만났다");
+
         talkMe("\'아.. 안녕 .. 서아야..\'");
         talkSeo("\'안녕 "+Variables.name+"\'");
         talkSeo("\'너도 산책하러 나왔구나 ??\'");
@@ -70,6 +71,7 @@ public class River {
     public void talkSeoah(int choiceNumber){
         switch (choiceNumber){
             case 1:
+
                 talkMe("\'서아야.. 나랑 낚시 하지 않을래??\'");
                 if(Variables.love >=30){
                     if(rain==false){
@@ -93,7 +95,6 @@ public class River {
                 }else{
                     talkSeo("\'싫어 나 물수제비 안할꺼야\'");
                     loveGage(-5);
-
                 }
                 break;
         }
