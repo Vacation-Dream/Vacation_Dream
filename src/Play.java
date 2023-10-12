@@ -44,13 +44,15 @@ public class Play {
 
         Util.loveCheck();
         System.out.println("========== 오늘의 선택지 ==========");
-        if (Variables.today != 7 || Variables.dayplus.equals("아침") || Variables.dayplus.equals("오후")) {
+        if (Variables.today != 7) {
             System.out.println("(1) 근처에서 산책한다.");
             System.out.println("(2) 냇가로 이동한다.");
             System.out.println("(3) 시장으로 이동한다.");
-        } else if (Variables.today == 7 && Variables.dayplus.equals("저녁")){
+            System.out.println(">> ");
+        } else if (Variables.today == 7){
             System.out.println("(1) 축제장소로 이동한다.");
             System.out.println("(2) 실패가 두려워서 가지않는다.");
+            System.out.println(">> ");
         }
         String choice = sc.nextLine();
         if (Variables.today != 7) {

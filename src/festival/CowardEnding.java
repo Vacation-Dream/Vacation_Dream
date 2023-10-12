@@ -1,8 +1,6 @@
 package festival;
 import util.Variables;
 
-import static festival.Play.MC;
-import static festival.Play.FMC;
 import static util.Util.pressEnter;
 import static util.Util.timeString;
 public class CowardEnding {
