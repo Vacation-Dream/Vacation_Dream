@@ -29,7 +29,7 @@ public class Play {
 
         System.out.println("(1) 전화를 받게 둔다.");
         System.out.println("(2) 전화를 받지 못하게 한다.");
-        System.out.println(">> ");
+        System.out.print(">> ");
         choice = sc.nextLine();
 
         switch (choice) {

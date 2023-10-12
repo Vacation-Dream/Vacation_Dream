@@ -48,7 +48,7 @@ public class Play {
         else System.out.print("\uD83C\uDF19 ");
         System.out.printf("%d일차 %s입니다. \n", Variables.today, Variables.dayplus);
 
-        if (Variables.today == 5 || Variables.dayplus.equals("아침")){
+        if (Variables.today == 5 && Variables.dayplus.equals("아침")){
             HiddenScene();
             System.out.printf("%d일차 %s입니다. \n", Variables.today, Variables.dayplus);
         }
