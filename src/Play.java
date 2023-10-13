@@ -81,7 +81,7 @@ public class Play {
                     roof();
                     break;
                 case "3":
-                    Market.vegetable();
+                    Market.main1();
                     roof();
                     break;
                 case "4":

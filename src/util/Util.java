@@ -103,6 +103,18 @@ public class Util {
         System.out.print("\uD83D\uDC66\uD83C\uDFFB(준석): ");
         Util.timeString(s);
     }
+    public static void talkMadam(String s){
+        System.out.print("\uD83D\uDC69\uD83C\uDFFB\u200D\uD83E\uDDB0(분식집 아주머니): ");
+        Util.timeString(s);
+    }
+    public static void talkFlower(String s){
+        System.out.print("\uD83D\uDC69\uD83C\uDFFC\u200D\uD83E\uDDB1(꽃가게 사장님): ");
+        Util.timeString(s);
+    }
+    public static void talkVegetable(String s){
+        System.out.print("\uD83E\uDDD4(야채가게 아저씨): ");
+        Util.timeString(s);
+    }
     public static void loveGage(int num){
         Variables.love += num;
         if (num >= 10){
