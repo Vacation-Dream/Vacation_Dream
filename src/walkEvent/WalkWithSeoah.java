@@ -17,7 +17,7 @@ public class WalkWithSeoah {
             List.of(0,0,0,1,2)
     );
     static List<Integer> talks = new ArrayList<>(
-            List.of(0,1)
+            List.of(0,1,2,3,3)
     );
     public static void start(){
         makeLine();
@@ -80,10 +80,142 @@ public class WalkWithSeoah {
                             selectTalk2();
                             deleteEvent();
                             break;
+                        case 2:
+                            selectTalk3();
+                            deleteEvent();
+                            break;
+                        default:
+                            timeString("# 할 말이 없어 금방 집으로 돌아갔다");
+                            break;
                     }
                     break w;
                 case "2":
                     goHome();
+                    break w;
+                default:
+                    System.out.println("# 선택지에 있는 숫자를 입력해 주세요");
+            }
+        }
+    }
+
+    private static void selectTalk3() {
+        talkMe("'서아야 시장에서 맛있는 음식 추천해줘~'");
+        talkSeo("'음.. 시장에 있는 xx분식! 거기 엄청 맛있어~'");
+        talkSeo("'넌 분식중에 뭐가 제일 좋아?'");
+
+        pressEnter();
+        System.out.println("1. 떡볶이");
+        System.out.println("2. 순대");
+        System.out.println("3. 튀김");
+
+        w : while (true){
+            String select = input("# 선택 : ");
+
+            switch (select){
+                case "1":
+                    good();
+                    loveGage(5);
+                    endEvent();
+                    break w;
+                case "2":
+                    bad();
+                    loveGage(-5);
+                    endEvent();
+                    break w;
+                case "3":
+                    soso();
+                    loveGage(0);
+                    endEvent();
+                    break w;
+                default:
+                    System.out.println("# 선택지에 있는 숫자를 입력해 주세요");
+            }
+        }
+    }
+
+
+
+    private static void selectTalk1() {
+        timeString("# 꼬마아이가 아이스크림을 들고 뛰어간다.");
+        talkSeo("'아이스크림 시원하겠다..'");
+        talkMe("'그러게.. 날이 너무 덥네'");
+        talkSeo("'너는 무슨 아이스크림이 제일 좋아?'");
+        talkMe("내가 좋아하는 아이스크림..? ");
+        
+        pressEnter();
+        System.out.println("1. 비비빙");
+        System.out.println("2. 세계콘");
+        System.out.println("3. 꿀꿀바");
+
+        w : while (true){
+            String select = input("# 선택 : ");
+
+            switch (select){
+                case "1":
+                    bad();
+                    loveGage(-5);
+                    endEvent();
+                    break w;
+                case "2":
+                    good();
+                    loveGage(5);
+                    endEvent();
+                    break w;
+                case "3":
+                    soso();
+                    loveGage(0);
+                    endEvent();
+                    break w;
+                default:
+                    System.out.println("# 선택지에 있는 숫자를 입력해 주세요");
+            }
+        }
+
+    }
+
+    private static void bad() {
+        talkSeo("'아.. 그래? 난 그거 별로인데..')");
+    }
+
+    private static void good() {
+        talkSeo("'어! 나 그거 엄청 좋아하는데.'");
+        timeString("# 신나게 대화하며 걸었다.");
+    }
+
+    private static void soso() {
+        talkSeo("'아, 그렇구나~'");
+        timeString("# 호감도가 오르지 않았다");
+    }
+
+    private static void selectTalk2() {
+        talkMe("'어 여기 꽃이 이렇게 많았나?'");
+        talkSeo("'몇년 전에 누가 많이 심어 놨더라고, 이쁘지?'");
+        talkMe("'그러게 이쁘다~'");
+        talkSeo(Variables.name+"은(/는) 무슨 꽃이 제일 좋아?");
+        talkMe("내가 좋아하는 꽃..?");
+        pressEnter();
+
+        System.out.println("1. 너만보는 해바라기");
+        System.out.println("2. 향이 매우 좋은 라일락");
+        System.out.println("3. 뾰족한 가시가 일품인 장미");
+
+        w : while (true){
+            String select = input("# 선택 : ");
+
+            switch (select){
+                case "1":
+                    bad();
+                    loveGage(-5);
+                    endEvent();
+                    break w;
+                case "2":
+                    good();
+                    loveGage(5);
+                    endEvent();
+                    break w;
+                case "3":
+                    soso();
+                    endEvent();
                     break w;
                 default:
                     System.out.println("# 선택지에 있는 숫자를 입력해 주세요");
@@ -175,124 +307,6 @@ public class WalkWithSeoah {
         }
 
     }
-
-    private static void selectTalk1() {
-        timeString("# 꼬마아이가 아이스크림을 들고 뛰어간다.");
-        talkSeo("'아이스크림 시원하겠다..'");
-        talkMe("'그러게.. 날이 너무 덥네'");
-        talkSeo("'너는 무슨 아이스크림이 제일 좋아?'");
-        talkMe("내가 좋아하는 아이스크림..? ");
-        
-        pressEnter();
-        System.out.println("1. 비비빙");
-        System.out.println("2. 세계콘");
-        System.out.println("3. 꿀꿀바");
-
-        w : while (true){
-            String select = input("# 선택 : ");
-
-            switch (select){
-                case "1":
-                    selectTalk1_1();
-                    loveGage(-5);
-                    endEvent();
-                    break w;
-                case "2":
-                    selectTalk1_2();
-                    loveGage(5);
-                    endEvent();
-                    break w;
-                case "3":
-                    selectTalk1_3();
-                    loveGage(0);
-                    endEvent();
-                    break w;
-                default:
-                    System.out.println("# 선택지에 있는 숫자를 입력해 주세요");
-            }
-        }
-
-    }
-
-    private static void selectTalk1_1() {
-        talkSeo("'아.. 그렇구나.. 그거 우리 할머니가 제일 좋아하는거긴 한데..'(목소리가 점점 작아진다)");
-        talkMe("'응? 뭐라고?'");
-        talkSeo("'아.. 아무것도 아니야~'");
-    }
-
-    private static void selectTalk1_2() {
-        talkSeo("'어! 나 그거 엄청 좋아하는데.'");
-        talkMe("'진짜?! 콘부분이 진짜 맛있지?'");
-        talkSeo("'맞아~ 콘이랑 아이스크림 조합이 짱이지~'");
-        timeString("# 신나게 대화하며 걸었다.");
-    }
-
-    private static void selectTalk1_3() {
-        talkSeo("'아, 그렇구나~'");
-        talkMe("'서아 너는 뭐 좋아하는데?'");
-        talkSeo("'나는 콘이 좋아.'");
-        talkMe("'아..! 그럼 나중에 콘 사줄게!'");
-        talkSeo("'정말? 고마워~ '");
-
-        timeString("# 약속없는 기약에 호감도가 오르지 않았다");
-
-    }
-
-    private static void selectTalk2() {
-        talkMe("'어 여기 꽃이 이렇게 많았나?'");
-        talkSeo("'몇년 전에 누가 많이 심어 놨더라고, 이쁘지?'");
-        talkMe("'그러게 이쁘다~'");
-        talkSeo(Variables.name+"은(/는) 무슨 꽃이 제일 좋아?");
-        talkMe("내가 좋아하는 꽃..?");
-        pressEnter();
-
-        System.out.println("1. 꽃? 그런건 기지배들이나 좋아하는거지");
-        System.out.println("2. 향이 매우 좋은 라일락");
-        System.out.println("3. 뾰족한 가시가 일품인 장미");
-
-        w : while (true){
-            String select = input("# 선택 : ");
-
-            switch (select){
-                case "1":
-                    selectTalk2_1();
-                    loveGage(-5);
-                    endEvent();
-                    break w;
-                case "2":
-                    selectTalk2_2();
-                    loveGage(5);
-                    endEvent();
-                    break w;
-                case "3":
-                    selectTalk2_3();
-                    endEvent();
-                    break w;
-                default:
-                    System.out.println("# 선택지에 있는 숫자를 입력해 주세요");
-            }
-        }
-    }
-
-    private static void selectTalk2_1() {
-        talkMe("'난 꽃 안 좋아해, 그런건 기지배들이나 좋아하는거지'");
-        talkSeo("'뭐? 어떻게 그런 심한말을 할 수 있어? 됐어 나 갈래'");
-    }
-
-    private static void selectTalk2_2() {
-        talkMe("'난 라일락이 제일 좋더라, 향이 좋잖아'");
-        talkSeo("'정말? 나도 엄청 좋아하는데! 우리 꽤 잘 맞네~'");
-    }
-
-    private static void selectTalk2_3() {
-        talkMe("'장미가 빨갛고 이쁘던데..'");
-        talkSeo("'장미 이쁘긴 한데, 가시 있어서 난 별로 안 좋아해~'");
-        talkMe("'요새 가시 없는 장미도 있어!'");
-        talkSeo("'아 그렇구나~'");
-
-        timeString("# 서아의 호감도를 쌓지 못했다.");
-    }
-
     //호감도 40일때 나오는 스토리
     private static void since2() {
         timeString("# 산책중 서아의 집에 찾아 갔다.");
@@ -443,7 +457,6 @@ public class WalkWithSeoah {
     }
     private static void deleteEvent(){
         scences.remove(0);
-
     }
 
 }

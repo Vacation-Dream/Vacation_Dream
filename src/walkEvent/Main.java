@@ -1,17 +1,9 @@
 package walkEvent;
-
-import util.Util;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        while (true){
-            select();
-        }
-    }
     // BalloonEvent = 0 , Walk = 1 , Dog = 2 , Not = 3
     static List<Integer> events = new ArrayList<>(
             List.of(0,1,1,2,3,3)
