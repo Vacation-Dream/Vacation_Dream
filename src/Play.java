@@ -21,15 +21,11 @@ public class Play {
     }
 
     private static void firstStory() {
-//        timeString("여름방학을 맞이해 주인공은 할머니댁에 놀러가게 됩니다.");
-//        timeString("이곳은 평화로운 시골 동네로, 주인공은 조용한 여름 휴가를 즐기려고 기대합니다.");
-//        timeString("하지만 할머니댁 옆집에 사는 서아라는 손녀를 만나게 됩니다.");
-//        timeString("서아는 동네에서 유명한 미녀로,");
-//        timeString("그녀의 아름다움과 매력에 주인공은 반한 것 같습니다.");
-//        pressEnter();
+        timeString("# 여름방학을 맞이해 주인공은 할머니댁에 놀러왔습니다.");
+        timeString("# 일주일 뒤에있는 불꽃놀이 축제를 보고 돌아갈 예정입니다.");
+        pressEnter();
 
-        System.out.println("==================");
-        timeString("# 목표: 7일차 저녁, 축제에서 서아에게 고백하기");
+        System.out.println("========= 이름설정 =========");
         System.out.print("# 당신의 이름을 정해주세요: ");
         Variables.name = sc.nextLine();
 
