@@ -13,6 +13,7 @@ import static util.Util.*;
 public class WalkWithSeoah {
 
     public static boolean isHome = true;
+    public static boolean isHome2 = true;
     static List<Integer> scences = new ArrayList<>(
             List.of(0,0,0,1,2)
     );
@@ -232,7 +233,7 @@ public class WalkWithSeoah {
             timeString("# 서아는 저멀리 혼자 가버렸다");
             loveGage(-5);
             isHome = false;
-        } else if (Variables.love < 50){
+        } else if (Variables.love < 50 && isHome2){
             talkSeo("'할 것도 없는데 그럴까?'");
             talkMe("'응! 아 방 더러워서 좀 치워야 하니까 밖에 잠깐 있어'");
             talkSeo("'어? 이거 우리집에도 있는건데.. 이거 뭐지?'");
@@ -262,9 +263,7 @@ public class WalkWithSeoah {
                 }
             }
             isHome = false;
-
-
-
+            isHome2 = false;
         } else{
             talkSeo("'부모님 안 계셔..?'");
             talkMe("'응.. 할머니 할아버지는 회관에 가셨고, 부모님은 일 가셨어'");

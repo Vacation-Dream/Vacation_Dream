@@ -13,7 +13,6 @@ public class Main {
         Collections.shuffle(events);
         //시작할 이벤트 선택
         int startEvent = events.get(0);
-        System.out.println("events = " + events);
         switch (startEvent) {
             case 0:
                 BalloonEvent.start();
