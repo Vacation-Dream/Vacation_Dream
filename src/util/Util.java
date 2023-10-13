@@ -115,6 +115,10 @@ public class Util {
         System.out.print("\uD83E\uDDD4(야채가게 아저씨): ");
         Util.timeString(s);
     }
+    public static void talkhal(String s){
+        System.out.print("\uD83E\uDDD3(할머니): ");
+        Util.timeString(s);
+    }
     public static void loveGage(int num){
         Variables.love += num;
         if (num >= 10){
